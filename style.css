@@ -1,0 +1,911 @@
+/* Estilos globais e de corpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Padrão Claro */
+    color: #333; /* Padrão Escuro */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ------------------------------------ */
+/* ESTILOS DE ACESSIBILIDADE (INICIO)   */
+/* ------------------------------------ */
+
+/* --- Classes de Layout e Cores (Aplicadas ao <body>) --- */
+
+/* Textos */
+body.text-large { font-size: 110%; }
+body.text-small { font-size: 90%; }
+/* Padrão é 100% (CSS base) */
+
+/* Largura */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 0; 
+    padding: 20px 40px;
+}
+body.layout-default .main-container {
+    max-width: 900px; /* Largura menor para layout 'padrão' */
+}
+.content {
+    flex-grow: 1; 
+    max-width: 100%; 
+}
+
+/* Esquema de Cores */
+body.scheme-dark {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+body.scheme-dark .header {
+    background-color: #2a2a2a;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+body.scheme-dark .nav-bar a {
+    color: #e0e0e0;
+}
+body.scheme-dark .card {
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+body.scheme-dark .card h3 {
+    color: #64b5f6; /* Azul claro para títulos em modo escuro */
+}
+
+/* CORREÇÃO DE ACESSIBILIDADE (Texto do Card no Modo Escuro) */
+body.scheme-dark .card-body p {
+    color: #bdbdbd; /* Cinza claro para visibilidade no fundo escuro do card */
+}
+
+body.scheme-dark a {
+    color: #90caf9;
+}
+body.scheme-dark h2 {
+    color: #e0e0e0;
+}
+body.scheme-dark hr {
+    border-color: #444;
+}
+
+/* Botão Flutuante de Acessibilidade */
+.accessibility-toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4682b4; /* Azul Primário */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: background-color 0.3s;
+    display: block; 
+}
+
+.accessibility-toggle-btn:hover {
+    background-color: #335d80;
+}
+
+/* Painel Flutuante de Acessibilidade */
+.sidebar-acessibilidade {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    border: 1px solid #ccc;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.sidebar-acessibilidade.hidden {
+    display: none;
+}
+
+.sidebar-acessibilidade h3 {
+    margin-top: 0;
+    font-size: 1.6em;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #333;
+    padding: 5px;
+}
+
+.accessibility-options {
+    margin-bottom: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.accessibility-options p {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4682b4;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.radio-option input[type="radio"] {
+    margin-right: 10px;
+}
+
+.radio-option label {
+    cursor: pointer;
+    font-size: 0.95em;
+}
+
+/* Adaptando o painel flutuante para o modo escuro */
+body.scheme-dark .sidebar-acessibilidade {
+    background-color: #1e1e1e;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.7);
+    border: 1px solid #333;
+    color: #e0e0e0;
+}
+body.scheme-dark .sidebar-acessibilidade h3 {
+    color: #64b5f6;
+    border-bottom-color: #444;
+}
+body.scheme-dark .sidebar-acessibilidade p {
+    color: #64b5f6;
+}
+body.scheme-dark .close-btn {
+    color: #e0e0e0;
+}
+body.scheme-dark .accessibility-toggle-btn {
+    background-color: #64b5f6;
+}
+body.scheme-dark .accessibility-toggle-btn:hover {
+    background-color: #42a5f5;
+}
+
+/* ------------------------------------ */
+/* ESTILOS DE ACESSIBILIDADE (FIM)      */
+/* ------------------------------------ */
+
+/* Estilos do cabeçalho */
+.header {
+    background-color: #fff;
+    color: #333;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #4682b4;
+}
+
+/* Estilos da navegação */
+.nav-bar a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-bar a:hover {
+    color: #4682b4;
+}
+
+/* Grid de Imagens/Cartões */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+/* Estilos do Cartão */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-body h3 {
+    color: #4682b4;
+    margin-top: 0;
+    font-size: 1.4em;
+}
+
+.card-body p {
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* Estilos da tag <a> que envolve o card (para torná-lo clicável) */
+.card-link {
+    text-decoration: none; /* Remove sublinhado do link */
+    color: inherit; /* Mantém a cor do texto padrão */
+}
+/* Garante que o texto dentro do link, se não estiver no card-body p, herde a cor correta */
+body.scheme-dark .card-link {
+    color: inherit; 
+}
+
+
+/* Estilos para a página SOBRE (garantindo que funcione com o novo layout) */
+.sobre-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.section-mission, .section-values, .section-team {
+    margin-bottom: 40px;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.section-mission h2, .section-values h2, .section-team h2 {
+    color: #4682b4;
+    border-left: 5px solid #4682b4;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.mission-cards {
+    display: flex;
+    gap: 30px;
+}
+
+.card-mission {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card-mission h3 {
+    color: #333;
+    font-size: 1.2em;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.value-list {
+    list-style: none;
+    padding: 0;
+}
+
+.value-item {
+    background: #e9f5ff;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.value-item .icon {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #4682b4;
+}
+
+.team-member h4 {
+    margin: 5px 0;
+    color: #333;
+}
+
+.team-member p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* ------------------------------------ */
+/* RESPONSIVIDADE                       */
+/* ------------------------------------ */
+
+@media (max-width: 900px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 20px;
+    }
+    
+    .nav-bar {
+        margin-top: 10px;
+    }
+    
+    .nav-bar a {
+        margin: 0 10px;
+        font-size: 0.9em;
+    }
+
+    .main-container {
+        padding: 20px;
+    }
+
+    /* Sobreescreve o estilo da página Sobre em telas menores */
+    .section-mission .mission-cards {
+        flex-direction: column;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 1.5em;
+    }
+    
+    .nav-bar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-bar a {
+        margin: 5px 8px;
+    }
+
+    /* Tela cheia para o painel de acessibilidade em mobile */
+    .sidebar-acessibilidade {
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        transform: none; /* Remove a centralização em telas cheias */
+        overflow-y: auto; 
+        padding-top: 50px; 
+    }
+    
+    .close-btn {
+        font-size: 1.5em;
+        top: 15px;
+        right: 20px;
+    }
+}
+
+/* --- Estilos de Animação (Mantidos do código anterior) --- */
+
+/* Animação para o título */
+h1 {
+    animation: slideIn 2s ease-out;
+
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animação das imagens da galeria */
+.card {
+    /* Aplicamos a animação no card inteiro */
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/* Estilos globais e de corpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Padrão Claro */
+    color: #333; /* Padrão Escuro */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ------------------------------------ */
+/* ESTILOS DE ACESSIBILIDADE (INICIO)   */
+/* ------------------------------------ */
+
+/* --- Classes de Layout e Cores (Aplicadas ao <body>) --- */
+
+/* Textos */
+body.text-large { font-size: 110%; }
+body.text-small { font-size: 90%; }
+/* Padrão é 100% (CSS base) */
+
+/* Largura */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 0; 
+    padding: 20px 40px;
+}
+body.layout-default .main-container {
+    max-width: 900px; /* Largura menor para layout 'padrão' */
+}
+.content {
+    flex-grow: 1; 
+    max-width: 100%; 
+}
+
+/* Esquema de Cores */
+body.scheme-dark {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+body.scheme-dark .header {
+    background-color: #2a2a2a;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+body.scheme-dark .nav-bar a {
+    color: #e0e0e0;
+}
+body.scheme-dark .card {
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+body.scheme-dark .card h3 {
+    color: #4da6ff; /* COR MELHORADA: Azul mais claro para títulos em modo escuro */
+}
+
+/* CORREÇÃO DE ACESSIBILIDADE (Texto do Card no Modo Escuro) */
+body.scheme-dark .card-body p {
+    color: #ffffff; /* COR MELHORADA: Texto branco para contraste máximo no fundo escuro do card */
+    font-weight: 400; /* Garante peso normal */
+}
+
+body.scheme-dark a {
+    color: #90caf9;
+}
+body.scheme-dark h2 {
+    color: #e0e0e0;
+}
+body.scheme-dark hr {
+    border-color: #444;
+}
+/* COR MELHORADA: Estilo para parágrafos em geral no modo escuro, para garantir contraste */
+body.scheme-dark p {
+    color: #e0e0e0; 
+}
+
+
+/* Botão Flutuante de Acessibilidade */
+.accessibility-toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4682b4; /* Azul Primário */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: background-color 0.3s;
+    display: block; 
+}
+
+.accessibility-toggle-btn:hover {
+    background-color: #335d80;
+}
+
+/* Painel Flutuante de Acessibilidade */
+.sidebar-acessibilidade {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    border: 1px solid #ccc;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.sidebar-acessibilidade.hidden {
+    display: none;
+}
+
+.sidebar-acessibilidade h3 {
+    margin-top: 0;
+    font-size: 1.6em;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #333;
+    padding: 5px;
+}
+
+.accessibility-options {
+    margin-bottom: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.accessibility-options p {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4682b4;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.radio-option input[type="radio"] {
+    margin-right: 10px;
+}
+
+.radio-option label {
+    cursor: pointer;
+    font-size: 0.95em;
+}
+
+/* Adaptando o painel flutuante para o modo escuro */
+body.scheme-dark .sidebar-acessibilidade {
+    background-color: #1e1e1e;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.7);
+    border: 1px solid #333;
+    color: #e0e0e0;
+}
+body.scheme-dark .sidebar-acessibilidade h3 {
+    color: #64b5f6;
+    border-bottom-color: #444;
+}
+body.scheme-dark .sidebar-acessibilidade p {
+    color: #64b5f6;
+}
+body.scheme-dark .close-btn {
+    color: #e0e0e0;
+}
+body.scheme-dark .accessibility-toggle-btn {
+    background-color: #64b5f6;
+}
+body.scheme-dark .accessibility-toggle-btn:hover {
+    background-color: #42a5f5;
+}
+
+/* ------------------------------------ */
+/* ESTILOS DE ACESSIBILIDADE (FIM)      */
+/* ------------------------------------ */
+
+/* Estilos do cabeçalho */
+.header {
+    background-color: #fff;
+    color: #333;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #4682b4;
+}
+
+/* Estilos da navegação */
+.nav-bar a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-bar a:hover {
+    color: #4682b4;
+}
+
+/* Grid de Imagens/Cartões */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+/* Estilos do Cartão */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-body h3 {
+    color: #4682b4;
+    margin-top: 0;
+    font-size: 1.4em;
+}
+
+.card-body p {
+    font-size: 0.95em;
+    color: #555; /* COR MELHORADA: Cor padrão para texto claro, é escuro */
+}
+
+/* Estilos da tag <a> que envolve o card (para torná-lo clicável) */
+.card-link {
+    text-decoration: none; /* Remove sublinhado do link */
+    color: inherit; /* Mantém a cor do texto padrão */
+}
+/* Garante que o texto dentro do link, se não estiver no card-body p, herde a cor correta */
+body.scheme-dark .card-link {
+    color: inherit; 
+}
+
+
+/* Estilos para a página SOBRE (garantindo que funcione com o novo layout) */
+.sobre-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.section-mission, .section-values, .section-team {
+    margin-bottom: 40px;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+/* COR MELHORADA: Garante que os títulos h2 da página Sobre tenham contraste no modo escuro */
+body.scheme-dark .section-mission h2, 
+body.scheme-dark .section-values h2, 
+body.scheme-dark .section-team h2 {
+    color: #64b5f6; 
+}
+
+
+.section-mission h2, .section-values h2, .section-team h2 {
+    color: #4682b4;
+    border-left: 5px solid #4682b4;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+/* COR MELHORADA: Garante que o texto dentro do card-mission tenha contraste */
+body.scheme-dark .card-mission p {
+    color: #e0e0e0; 
+}
+
+.mission-cards {
+    display: flex;
+    gap: 30px;
+}
+
+.card-mission {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card-mission h3 {
+    color: #333;
+    font-size: 1.2em;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.value-list {
+    list-style: none;
+    padding: 0;
+}
+/* COR MELHORADA: Garante que o texto do item da lista tenha contraste */
+body.scheme-dark .value-item {
+    background: #333;
+    color: #e0e0e0;
+}
+
+
+.value-item {
+    background: #e9f5ff;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.value-item .icon {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #4682b4;
+}
+
+.team-member h4 {
+    margin: 5px 0;
+    color: #333;
+}
+
+.team-member p {
+    font-size: 0.9em;
+    color: #666; /* COR MELHORADA: Cor padrão para texto claro, um pouco mais escuro */
+}
+/* COR MELHORADA: Garante que o texto do membro da equipe tenha contraste no modo escuro */
+body.scheme-dark .team-member p {
+    color: #e0e0e0;
+}
+
+
+/* ------------------------------------ */
+/* RESPONSIVIDADE                       */
+/* ------------------------------------ */
+
+@media (max-width: 900px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 20px;
+    }
+    
+    .nav-bar {
+        margin-top: 10px;
+    }
+    
+    .nav-bar a {
+        margin: 0 10px;
+        font-size: 0.9em;
+    }
+
+    .main-container {
+        padding: 20px;
+    }
+
+    /* Sobreescreve o estilo da página Sobre em telas menores */
+    .section-mission .mission-cards {
+        flex-direction: column;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 1.5em;
+    }
+    
+    .nav-bar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-bar a {
+        margin: 5px 8px;
+    }
+
+    /* Tela cheia para o painel de acessibilidade em mobile */
+    /* ... (continuação do media query que foi cortada no input original) ... */
+}

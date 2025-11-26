@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="acessibilidade.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - Decifrando Mentes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-sobre.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Decifrando Mentes</h1>
+        <nav class="nav-bar">
+            <a href="teste.html">INÍCIO</a>
+            <a href="sobre.html">SOBRE</a>
+            <a href="sintomas.html">SINTOMAS</a>
+            <a href="contatos.html">CONTATOS</a> 
+        </nav>
+    </header>
+
+    <div class="main-container">
+
+        <main class="sobre-content">
+            <section class="section-mission">
+                <!-- Texto único substituindo Objetivos e Visão -->
+                <h2>🧠 Sobre a Iniciativa Decifrando Mentes</h2>
+                <p>
+                    A iniciativa "Decifrando Mentes" nasceu com o objetivo de ser um ponto de referência digital para quem busca **entendimento** e **apoio** sobre saúde mental. Nossa missão é clara: promover a **conscientização** e a **desestigmatização** das doenças mentais através de informações claras, precisas e acessíveis, sempre encorajando a busca por ajuda profissional. Acreditamos que a informação correta é o primeiro passo para uma comunidade mais empática e bem-cuidada.
+                </p>
+            </section>
+
+            <!-- A seção de Valores foi removida conforme a estrutura do HTML anterior -->
+
+            <section class="section-team">
+                <h2>👥 Quem Somos (A Equipe)</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="membro-1.jpg" alt="Foto de Victor">
+                        <h4>Victor</h4>
+                        <p>Fundador e editor-chefe. Especialista em comunicação de saúde pública.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="membro-2.jpg" alt="Foto de Hilary">
+                        <h4>Hilary</h4>
+                        <p>Consultora técnica. Psiquiatra, responsável pela revisão científica do conteúdo.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="membro-3.jpg" alt="Foto de Guilherme">
+                        <h4>Guilherme</h4>
+                        <p>Designer UX/UI. Responsável pela acessibilidade e usabilidade do site.</p>
+                    </div>
+                     <div class="team-member">
+                        <img src="membro-3.jpg" alt="Foto de Isis">
+                        <h4>Isis</h4>
+                        <p>Gerente de Mídias Sociais e Engajamento Comunitário.</p>
+                    </div>
+                     <div class="team-member">
+                        <img src="membro-3.jpg" alt="Foto de Pedro">
+                        <h4>Pedro</h4>
+                        <p>Desenvolvedor Front-end, responsável pela implementação das páginas.</p>
+                    </div>
+                     <div class="team-member">
+                        <img src="membro-3.jpg" alt="Foto de Luis">
+                        <h4>Luis</h4>
+                        <p>Especialista em SEO e Análise de Dados do Projeto.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <button class="accessibility-toggle-btn" id="toggleAcessibilidade" aria-label="Abrir Opções de Acessibilidade">
+            ♿️
+        </button>
+
+        <aside class="sidebar-acessibilidade hidden" id="accessibilityPanel">
+            <h3>ACESSIBILIDADE</h3>
+            <button class="close-btn" id="closeAcessibilidade" aria-label="Fechar Opções de Acessibilidade">✖</button>
+            
+            <div class="accessibility-options">
+                <p>TEXTOS</p>
+                <div class="radio-option">
+                    <input type="radio" id="texto-grande" name="tamanho-texto">
+                    <label for="texto-grande">GRANDE</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="texto-padrao" name="tamanho-texto">
+                    <label for="texto-padrao">PADRÃO</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="texto-pequeno" name="tamanho-texto" checked>
+                    <label for="texto-pequeno">PEQUENO</label>
+                </div>
+            </div>
+
+            <div class="accessibility-options">
+                <p>LARGURA</p>
+                <div class="radio-option">
+                    <input type="radio" id="largura-padrao" name="largura">
+                    <label for="largura-padrao">PADRÃO</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="largura-largo" name="largura" checked>
+                    <label for="largura-largo">LARGO</label>
+                </div>
+            </div>
+
+            <div class="accessibility-options">
+                <p>COR</p>
+                <div class="radio-option">
+                    <input type="radio" id="cor-claro" name="cor">
+                    <label for="cor-claro">CLARO</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="cor-escuro" name="cor" checked>
+                    <label for="cor-escuro">ESCURO</label>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+</body>
+</html>

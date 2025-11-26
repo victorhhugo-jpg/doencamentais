@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="acessibilidade.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esquizofrenia - Sintomas e Tratamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Decifrando Mentes</h1>
+        <nav class="nav-bar">
+            <a href="teste.html">INÍCIO</a> 
+            <a href="sobre.html">SOBRE</a>
+            <a href="sintomas.html" style="color: #4682b4;">SINTOMAS</a> 
+            <a href="contatos.html">CONTATOS</a> 
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <main class="content">
+            <h2 style="border-bottom: 2px solid #4682b4; padding-bottom: 10px;">Esquizofrenia: Sintomas, Causas e Manejo</h2>
+            
+            <img src="esquizofrenia.png" alt="Pessoa sentada no chão, abraçando os joelhos." style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px; margin-bottom: 20px;">
+
+            <section class="info-section">
+                <h3>O que é a Esquizofrenia?</h3>
+                <p>A esquizofrenia é um transtorno cerebral crônico e grave que afeta a forma como uma pessoa pensa, sente e se comporta. Pessoas com esquizofrenia podem parecer ter perdido o contato com a realidade (psicose), o que pode ser angustiante para elas, suas famílias e amigos.</p>
+            </section>
+
+            <section class="info-section">
+                <h3>Sintomas Principais</h3>
+                <p>Os sintomas são geralmente divididos em três categorias:</p>
+                <ul>
+                    <li>**Sintomas Positivos:** São aqueles que adicionam à experiência normal e incluem alucinações (ouvir ou ver coisas que não estão lá) e delírios (crenças falsas fixas).</li>
+                    <li>**Sintomas Negativos:** São aqueles que diminuem a capacidade da pessoa, como a falta de emoção (expressão facial diminuída) e a falta de prazer na vida diária (anedonia).</li>
+                    <li>**Sintomas Cognitivos:** Afetam a memória, a atenção e a capacidade de tomar decisões.</li>
+                </ul>
+            </section>
+
+            <section class="info-section">
+                <h3>Opções de Tratamento</h3>
+                <p>O tratamento é contínuo e geralmente envolve uma combinação de:</p>
+                <ol>
+                    <li>**Medicamentos Antipsicóticos:** Essenciais para controlar os sintomas agudos e prevenir recaídas.</li>
+                    <li>**Psicoterapia:** Ajuda a pessoa a lidar com o transtorno e a desenvolver habilidades sociais.</li>
+                    <li>**Apoio Social e Reabilitação:** Programas que ajudam na moradia, emprego e retomada da vida social.</li>
+                </ol>
+            </section>
+        </main>
+
+        <button class="accessibility-toggle-btn" id="toggleAcessibilidade" aria-label="Abrir Opções de Acessibilidade">
+            ♿️
+        </button>
+        <aside class="sidebar-acessibilidade hidden" id="accessibilityPanel">
+            <h3>ACESSIBILIDADE</h3>
+            <button class="close-btn" id="closeAcessibilidade" aria-label="Fechar Opções de Acessibilidade">✖</button>
+            <div class="accessibility-options">
+                <p>TEXTOS</p>
+                <div class="radio-option"><input type="radio" id="texto-grande" name="tamanho-texto"><label for="texto-grande">GRANDE</label></div>
+                <div class="radio-option"><input type="radio" id="texto-padrao" name="tamanho-texto"><label for="texto-padrao">PADRÃO</label></div>
+                <div class="radio-option"><input type="radio" id="texto-pequeno" name="tamanho-texto" checked><label for="texto-pequeno">PEQUENO</label></div>
+            </div>
+            <div class="accessibility-options">
+                <p>LARGURA</p>
+                <div class="radio-option"><input type="radio" id="largura-padrao" name="largura"><label for="largura-padrao">PADRÃO</label></div>
+                <div class="radio-option"><input type="radio" id="largura-largo" name="largura" checked><label for="largura-largo">LARGO</label></div>
+            </div>
+            <div class="accessibility-options">
+                <p>COR</p>
+                <div class="radio-option"><input type="radio" id="cor-claro" name="cor"><label for="cor-claro">CLARO</label></div>
+                <div class="radio-option"><input type="radio" id="cor-escuro" name="cor" checked><label for="cor-escuro">ESCURO</label></div>
+            </div>
+        </aside>
+    </div>
+
+</body>
+</html>

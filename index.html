@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="acessibilidade.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decifrando Mentes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Decifrando Mentes</h1>
+        <nav class="nav-bar">
+            <a href="teste.html">INÍCIO</a> 
+            <a href="sobre.html">SOBRE</a>
+            <a href="sintomas.html">SINTOMAS</a>
+            <a href="contatos.html">CONTATOS</a> 
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <div class="content">
+            <h2>TODAS:</h2>
+            <div class="image-grid">
+                <div class="card">
+                    <img src="esquizofrenia.png" alt="Pessoa sentada no chão, abraçando os joelhos.">
+                    <div class="card-body">
+                        <h3>Esquizofrenia</h3>
+                        <p>Esquizofrenia: transtorno neuropsiquiátrico com sintomas como alucinações, delírios e pensamento desorganizado, que podem afetar a percepção da realidade. O tratamento costuma incluir medicação, psicoterapia e apoio social.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Depressao.jpg" alt="Mulher sentada com a mão no rosto.">
+                    <div class="card-body">
+                        <h3>Depressão</h3>
+                        <p>Depressão: transtorno de humor caracterizado por tristeza persistente, pouca energia, perda de interesse e alterações no sono ou apetite, que atrapalham o dia a dia. Tratamento comum envolve psicoterapia, antidepressivos e mudanças de hábitos.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Ansiedade.jpg" alt="Mulher com as mãos na cabeça, de olhos fechados.">
+                    <div class="card-body">
+                        <h3>Transtornos de Ansiedade</h3>
+                        <p>Transtornos de ansiedade: medo ou preocupação excessiva, com sintomas físicos e prejudiciais ao funcionamento cotidiano; tratado com psicoterapia, manejo médico/medicação e técnicas de relaxamento.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Autismo.jpg" alt="Pessoa sentada no chão, abraçando os joelhos.">
+                    <div class="card-body">
+                        <h3>Autismo</h3>
+                        <p>Autismo (Transtorno do Espectro Autista, TEA): neurodesenvolvimento que afeta comunicação e interação social, com variações na intensidade e nas necessidades; intervenções precoce, educação inclusiva e terapias ajudam bastante, respeitando a individualidade de cada pessoa.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="TDHA.jpg" alt="Mulher sentada com a mão no rosto.">
+                    <div class="card-body">
+                        <h3>TDAH</h3>
+                        <p>TDAH: transtorno do déficit de atenção e hiperatividade; envolve desatenção, impulsividade e hiperatividade que atrapalham o desempenho escolar, profissional e social; manejo pode incluir educação, estratégias comportamentais e, quando indicado, medicação.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Bipolar.jpg" alt="Mulher com as mãos na cabeça, de olhos fechados.">
+                    <div class="card-body">
+                        <h3>Transtorno Bipolar</h3>
+                        <p>Transtorno Bipolar: conhecido por episódios alternados de depressão e mania/hipomania; tratamento geralmente envolve medicação para estabilizar o humor, psicoterapia e acompanhamento médico.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="accessibility-toggle-btn" id="toggleAcessibilidade" aria-label="Abrir Opções de Acessibilidade">
+            ♿️
+        </button>
+
+        <aside class="sidebar-acessibilidade hidden" id="accessibilityPanel">
+            <h3>ACESSIBILIDADE</h3>
+            <button class="close-btn" id="closeAcessibilidade" aria-label="Fechar Opções de Acessibilidade">✖</button>
+            
+            <div class="accessibility-options">
+                <p>TEXTOS</p>
+                <div class="radio-option">
+                    <input type="radio" id="texto-grande" name="tamanho-texto">
+                    <label for="texto-grande">GRANDE</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="texto-padrao" name="tamanho-texto">
+                    <label for="texto-padrao">PADRÃO</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="texto-pequeno" name="tamanho-texto" checked>
+                    <label for="texto-pequeno">PEQUENO</label>
+                </div>
+            </div>
+
+            <div class="accessibility-options">
+                <p>LARGURA</p>
+                <div class="radio-option">
+                    <input type="radio" id="largura-padrao" name="largura">
+                    <label for="largura-padrao">PADRÃO</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="largura-largo" name="largura" checked>
+                    <label for="largura-largo">LARGO</label>
+                </div>
+            </div>
+
+            <div class="accessibility-options">
+                <p>COR</p>
+                <div class="radio-option">
+                    <input type="radio" id="cor-claro" name="cor">
+                    <label for="cor-claro">CLARO</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="cor-escuro" name="cor" checked>
+                    <label for="cor-escuro">ESCURO</label>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+</body>
+</html>

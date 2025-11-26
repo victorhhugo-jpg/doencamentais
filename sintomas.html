@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="acessibilidade.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sintomas - Decifrando Mentes</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+    <header class="header">
+        <h1>Decifrando Mentes</h1>
+        <nav class="nav-bar">
+            <a href="teste.html">INÍCIO</a> 
+            <a href="sobre.html">SOBRE</a>
+            <a href="sintomas.html" style="color: #4682b4;">SINTOMAS</a> 
+            <a href="contatos.html">CONTATOS</a> 
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <div class="content">
+            <h2>SINTOMAS E TRANSTORNOS: VISÃO GERAL</h2>
+            <p style="font-size: 1.1em; color: #555; margin-bottom: 30px;">
+                Selecione um transtorno abaixo para entender seus principais **sintomas**, características e o que procurar em um diagnóstico.
+            </p>
+            
+            <div class="image-grid">
+                <a href="esquizofrenia.html" class="card-link">
+                    <div class="card">
+                        <img src="esquizofrenia.png" alt="Pessoa sentada no chão, abraçando os joelhos.">
+                        <div class="card-body">
+                            <h3>Esquizofrenia</h3>
+                            <p>Sintomas principais: Alucinações, delírios, pensamento e comportamento desorganizados. Afeta a percepção da realidade.</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="depressao.html" class="card-link">
+                    <div class="card">
+                        <img src="Depressao.jpg" alt="Mulher sentada com a mão no rosto.">
+                        <div class="card-body">
+                            <h3>Depressão</h3>
+                            <p>Sintomas principais: Tristeza persistente, perda de interesse, falta de energia e alterações no sono/apetite por semanas.</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="ansiedade.html" class="card-link">
+                    <div class="card">
+                        <img src="Ansiedade.jpg" alt="Mulher com as mãos na cabeça, de olhos fechados.">
+                        <div class="card-body">
+                            <h3>Transtornos de Ansiedade</h3>
+                            <p>Sintomas principais: Medo ou preocupação excessiva e constante, taquicardia, sudorese e tensão física intensa.</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="autismo.html" class="card-link">
+                    <div class="card">
+                        <img src="Autismo.jpg" alt="Pessoa sentada no chão, abraçando os joelhos.">
+                        <div class="card-body">
+                            <h3>Autismo (TEA)</h3>
+                            <p>Sintomas principais: Dificuldade na interação e comunicação social, padrões restritos e repetitivos de comportamento.</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="tdha.html" class="card-link">
+                    <div class="card">
+                        <img src="TDHA.jpg" alt="Mulher sentada com a mão no rosto.">
+                        <div class="card-body">
+                            <h3>TDAH</h3>
+                            <p>Sintomas principais: Desatenção, impulsividade e hiperatividade persistentes que interferem no desenvolvimento e funcionamento.</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="bipolar.html" class="card-link">
+                    <div class="card">
+                        <img src="Bipolar.jpg" alt="Mulher com as mãos na cabeça, de olhos fechados.">
+                        <div class="card-body">
+                            <h3>Transtorno Bipolar</h3>
+                            <p>Sintomas principais: Alternância entre episódios de humor elevado (mania) e humor deprimido.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <button class="accessibility-toggle-btn" id="toggleAcessibilidade" aria-label="Abrir Opções de Acessibilidade">
+            ♿️
+        </button>
+        <aside class="sidebar-acessibilidade hidden" id="accessibilityPanel">
+            <h3>ACESSIBILIDADE</h3>
+            <button class="close-btn" id="closeAcessibilidade" aria-label="Fechar Opções de Acessibilidade">✖</button>
+            <div class="accessibility-options">
+                <p>TEXTOS</p>
+                <div class="radio-option"><input type="radio" id="texto-grande" name="tamanho-texto"><label for="texto-grande">GRANDE</label></div>
+                <div class="radio-option"><input type="radio" id="texto-padrao" name="tamanho-texto"><label for="texto-padrao">PADRÃO</label></div>
+                <div class="radio-option"><input type="radio" id="texto-pequeno" name="tamanho-texto" checked><label for="texto-pequeno">PEQUENO</label></div>
+            </div>
+            <div class="accessibility-options">
+                <p>LARGURA</p>
+                <div class="radio-option"><input type="radio" id="largura-padrao" name="largura"><label for="largura-padrao">PADRÃO</label></div>
+                <div class="radio-option"><input type="radio" id="largura-largo" name="largura" checked><label for="largura-largo">LARGO</label></div>
+            </div>
+            <div class="accessibility-options">
+                <p>COR</p>
+                <div class="radio-option"><input type="radio" id="cor-claro" name="cor"><label for="cor-claro">CLARO</label></div>
+                <div class="radio-option"><input type="radio" id="cor-escuro" name="cor" checked><label for="cor-escuro">ESCURO</label></div>
+            </div>
+        </aside>
+    </div>
+
+</body>
+</html>

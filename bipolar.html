@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="acessibilidade.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transtorno Bipolar - Sintomas e Tratamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Decifrando Mentes</h1>
+        <nav class="nav-bar">
+            <a href="teste.html">INÍCIO</a> 
+            <a href="sobre.html">SOBRE</a>
+            <a href="sintomas.html" style="color: #4682b4;">SINTOMAS</a> 
+            <a href="contatos.html">CONTATOS</a> 
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <main class="content">
+            <h2 style="border-bottom: 2px solid #4682b4; padding-bottom: 10px;">Transtorno Bipolar: Fases, Sintomas e Estabilização</h2>
+            
+            <img src="Bipolar.jpg" alt="Mulher com as mãos na cabeça, de olhos fechados." style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px; margin-bottom: 20px;">
+
+            <section class="info-section">
+                <h3>O que é o Transtorno Bipolar?</h3>
+                <p>O Transtorno Bipolar é uma condição de saúde mental caracterizada por mudanças extremas de humor. Essas mudanças variam entre episódios de alta energia e humor eufórico (mania) e períodos de humor baixo e tristeza profunda (depressão), afetando a capacidade funcional da pessoa.</p>
+            </section>
+
+            <section class="info-section">
+                <h3>As Duas Fases Principais</h3>
+                <p>Os sintomas são definidos pela fase que o indivíduo está vivenciando:</p>
+                <ul>
+                    <li>**Fase Maníaca:** Humor anormalmente elevado, aumento da energia, pouca necessidade de sono, pensamento acelerado, impulsividade e grandiosidade.</li>
+                    <li>**Fase Depressiva:** Tristeza profunda, perda de prazer, falta de energia, alterações no apetite e pensamentos sobre morte ou suicídio.</li>
+                </ul>
+            </section>
+
+            <section class="info-section">
+                <h3>Opções de Tratamento</h3>
+                <p>O foco do tratamento é a estabilização do humor e a prevenção de novos episódios:</p>
+                <ol>
+                    <li>**Estabilizadores de Humor:** Medicamentos como lítio ou anticonvulsivantes são a base do tratamento.</li>
+                    <li>**Medicamentos Antipsicóticos (em alguns casos):** Utilizados para controlar sintomas agudos de mania.</li>
+                    <li>**Psicoterapia (Psicoeducação):** Fundamental para o paciente reconhecer os sinais precoces de mudança de humor e aderir ao tratamento.</li>
+                </ol>
+            </section>
+        </main>
+
+        <button class="accessibility-toggle-btn" id="toggleAcessibilidade" aria-label="Abrir Opções de Acessibilidade">♿️</button>
+        <aside class="sidebar-acessibilidade hidden" id="accessibilityPanel">
+            <h3>ACESSIBILIDADE</h3>
+            <button class="close-btn" id="closeAcessibilidade" aria-label="Fechar Opções de Acessibilidade">✖</button>
+            <div class="accessibility-options"><p>TEXTOS</p><div class="radio-option"><input type="radio" id="texto-grande" name="tamanho-texto"><label for="texto-grande">GRANDE</label></div><div class="radio-option"><input type="radio" id="texto-padrao" name="tamanho-texto"><label for="texto-padrao">PADRÃO</label></div><div class="radio-option"><input type="radio" id="texto-pequeno" name="tamanho-texto" checked><label for="texto-pequeno">PEQUENO</label></div></div>
+            <div class="accessibility-options"><p>LARGURA</p><div class="radio-option"><input type="radio" id="largura-padrao" name="largura"><label for="largura-padrao">PADRÃO</label></div><div class="radio-option"><input type="radio" id="largura-largo" name="largura" checked><label for="largura-largo">LARGO</label></div></div>
+            <div class="accessibility-options"><p>COR</p><div class="radio-option"><input type="radio" id="cor-claro" name="cor"><label for="cor-claro">CLARO</label></div><div class="radio-option"><input type="radio" id="cor-escuro" name="cor" checked><label for="cor-escuro">ESCURO</label></div></div>
+        </aside>
+    </div>
+
+</body>
+</html>

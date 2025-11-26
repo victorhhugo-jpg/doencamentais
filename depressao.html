@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="acessibilidade.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depressão - Sintomas e Tratamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Decifrando Mentes</h1>
+        <nav class="nav-bar">
+            <a href="teste.html">INÍCIO</a> 
+            <a href="sobre.html">SOBRE</a>
+            <a href="sintomas.html" style="color: #4682b4;">SINTOMAS</a> 
+            <a href="contatos.html">CONTATOS</a> 
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <main class="content">
+            <h2 style="border-bottom: 2px solid #4682b4; padding-bottom: 10px;">Depressão: Sintomas, Causas e Manejo</h2>
+            
+            <img src="Depressao.jpg" alt="Mulher sentada com a mão no rosto." style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px; margin-bottom: 20px;">
+
+            <section class="info-section">
+                <h3>O que é a Depressão?</h3>
+                <p>A Depressão (Transtorno Depressivo Maior) é uma doença mental comum, mas grave, caracterizada por um humor persistentemente deprimido e perda de interesse ou prazer nas atividades diárias. Não é apenas uma tristeza passageira, mas sim um problema que afeta o modo como a pessoa se sente, pensa e age.</p>
+            </section>
+
+            <section class="info-section">
+                <h3>Sintomas Principais</h3>
+                <p>Para o diagnóstico, vários sintomas devem estar presentes quase todos os dias por pelo menos duas semanas:</p>
+                <ul>
+                    <li>Tristeza persistente, ansiedade ou "vazio" emocional.</li>
+                    <li>Perda de interesse ou prazer em hobbies e atividades.</li>
+                    <li>Fadiga, pouca energia e sensação de lentidão.</li>
+                    <li>Alterações no sono (insônia ou hipersonia).</li>
+                    <li>Dificuldade de concentração, memória e tomada de decisões.</li>
+                    <li>Sentimentos de inutilidade ou culpa excessiva.</li>
+                </ul>
+            </section>
+
+            <section class="info-section">
+                <h3>Opções de Tratamento</h3>
+                <p>O tratamento é eficaz e geralmente combina:</p>
+                <ol>
+                    <li>**Psicoterapia (Terapia Cognitivo-Comportamental - TCC):** Ajuda o paciente a mudar padrões de pensamento e comportamento negativos.</li>
+                    <li>**Medicamentos Antidepressivos:** Podem ajudar a equilibrar a química cerebral.</li>
+                    <li>**Mudanças no Estilo de Vida:** Exercícios regulares, dieta saudável e apoio social.</li>
+                </ol>
+            </section>
+        </main>
+
+        <button class="accessibility-toggle-btn" id="toggleAcessibilidade" aria-label="Abrir Opções de Acessibilidade">♿️</button>
+        <aside class="sidebar-acessibilidade hidden" id="accessibilityPanel">
+            <h3>ACESSIBILIDADE</h3>
+            <button class="close-btn" id="closeAcessibilidade" aria-label="Fechar Opções de Acessibilidade">✖</button>
+            <div class="accessibility-options"><p>TEXTOS</p><div class="radio-option"><input type="radio" id="texto-grande" name="tamanho-texto"><label for="texto-grande">GRANDE</label></div><div class="radio-option"><input type="radio" id="texto-padrao" name="tamanho-texto"><label for="texto-padrao">PADRÃO</label></div><div class="radio-option"><input type="radio" id="texto-pequeno" name="tamanho-texto" checked><label for="texto-pequeno">PEQUENO</label></div></div>
+            <div class="accessibility-options"><p>LARGURA</p><div class="radio-option"><input type="radio" id="largura-padrao" name="largura"><label for="largura-padrao">PADRÃO</label></div><div class="radio-option"><input type="radio" id="largura-largo" name="largura" checked><label for="largura-largo">LARGO</label></div></div>
+            <div class="accessibility-options"><p>COR</p><div class="radio-option"><input type="radio" id="cor-claro" name="cor"><label for="cor-claro">CLARO</label></div><div class="radio-option"><input type="radio" id="cor-escuro" name="cor" checked><label for="cor-escuro">ESCURO</label></div></div>
+        </aside>
+    </div>
+
+</body>
+</html>

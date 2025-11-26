@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="acessibilidade.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autismo (TEA) - Sintomas e Apoio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Decifrando Mentes</h1>
+        <nav class="nav-bar">
+            <a href="teste.html">INÍCIO</a> 
+            <a href="sobre.html">SOBRE</a>
+            <a href="sintomas.html" style="color: #4682b4;">SINTOMAS</a> 
+            <a href="contatos.html">CONTATOS</a> 
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <main class="content">
+            <h2 style="border-bottom: 2px solid #4682b4; padding-bottom: 10px;">Autismo (TEA): Características e Apoio</h2>
+            
+            <img src="Autismo.jpg" alt="Pessoa sentada no chão, abraçando os joelhos." style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px; margin-bottom: 20px;">
+
+            <section class="info-section">
+                <h3>O que é o Transtorno do Espectro Autista (TEA)?</h3>
+                <p>O TEA é um transtorno do neurodesenvolvimento caracterizado por desafios na interação e comunicação social, e pela presença de padrões de comportamento, interesses ou atividades restritos e repetitivos. Como o nome "espectro" indica, as manifestações variam amplamente em tipo e gravidade de pessoa para pessoa.</p>
+            </section>
+
+            <section class="info-section">
+                <h3>Características Principais</h3>
+                <p>As características podem incluir:</p>
+                <ul>
+                    <li>Dificuldade em iniciar ou manter conversas e interações sociais recíprocas.</li>
+                    <li>Comportamentos repetitivos, como balançar o corpo ou repetir frases (ecolalia).</li>
+                    <li>Interesses intensos e focados em tópicos específicos.</li>
+                    <li>Hipersensibilidade ou hipossensibilidade a estímulos sensoriais (luz, som, textura).</li>
+                    <li>Dificuldade em entender expressões faciais e emoções alheias.</li>
+                </ul>
+            </section>
+
+            <section class="info-section">
+                <h3>Opções de Apoio e Intervenção</h3>
+                <p>As intervenções são focadas em maximizar a capacidade funcional e incluem:</p>
+                <ol>
+                    <li>**Terapia Comportamental (ABA - Análise do Comportamento Aplicada):** Ajuda a desenvolver habilidades de comunicação, sociais e de adaptação.</li>
+                    <li>**Fonoaudiologia:** Focada na melhoria da comunicação verbal e não-verbal.</li>
+                    <li>**Terapia Ocupacional:** Auxilia na integração sensorial e em habilidades motoras e de vida diária.</li>
+                </ol>
+            </section>
+        </main>
+
+        <button class="accessibility-toggle-btn" id="toggleAcessibilidade" aria-label="Abrir Opções de Acessibilidade">♿️</button>
+        <aside class="sidebar-acessibilidade hidden" id="accessibilityPanel">
+            <h3>ACESSIBILIDADE</h3>
+            <button class="close-btn" id="closeAcessibilidade" aria-label="Fechar Opções de Acessibilidade">✖</button>
+            <div class="accessibility-options"><p>TEXTOS</p><div class="radio-option"><input type="radio" id="texto-grande" name="tamanho-texto"><label for="texto-grande">GRANDE</label></div><div class="radio-option"><input type="radio" id="texto-padrao" name="tamanho-texto"><label for="texto-padrao">PADRÃO</label></div><div class="radio-option"><input type="radio" id="texto-pequeno" name="tamanho-texto" checked><label for="texto-pequeno">PEQUENO</label></div></div>
+            <div class="accessibility-options"><p>LARGURA</p><div class="radio-option"><input type="radio" id="largura-padrao" name="largura"><label for="largura-padrao">PADRÃO</label></div><div class="radio-option"><input type="radio" id="largura-largo" name="largura" checked><label for="largura-largo">LARGO</label></div></div>
+            <div class="accessibility-options"><p>COR</p><div class="radio-option"><input type="radio" id="cor-claro" name="cor"><label for="cor-claro">CLARO</label></div><div class="radio-option"><input type="radio" id="cor-escuro" name="cor" checked><label for="cor-escuro">ESCURO</label></div></div>
+        </aside>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="acessibilidade.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transtornos de Ansiedade - Sintomas e Tratamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Decifrando Mentes</h1>
+        <nav class="nav-bar">
+            <a href="teste.html">INÍCIO</a> 
+            <a href="sobre.html">SOBRE</a>
+            <a href="sintomas.html" style="color: #4682b4;">SINTOMAS</a> 
+            <a href="contatos.html">CONTATOS</a> 
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <main class="content">
+            <h2 style="border-bottom: 2px solid #4682b4; padding-bottom: 10px;">Transtornos de Ansiedade: Sintomas, Tipos e Manejo</h2>
+            
+            <img src="Ansiedade.jpg" alt="Mulher com as mãos na cabeça, de olhos fechados." style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px; margin-bottom: 20px;">
+
+            <section class="info-section">
+                <h3>O que são os Transtornos de Ansiedade?</h3>
+                <p>A ansiedade é uma reação normal ao estresse. No entanto, quando a ansiedade se torna excessiva, persistente e começa a interferir nas atividades diárias, é classificada como um Transtorno de Ansiedade. Eles são a forma mais comum de doença mental e incluem Transtorno de Ansiedade Generalizada (TAG), Fobias e Transtorno do Pânico.</p>
+            </section>
+
+            <section class="info-section">
+                <h3>Sintomas Principais</h3>
+                <p>Os sintomas físicos e psicológicos mais comuns incluem:</p>
+                <ul>
+                    <li>Preocupação excessiva e incontrolável sobre eventos cotidianos.</li>
+                    <li>Inquietação, sensação de "estar no limite".</li>
+                    <li>Tensão muscular, tremores e dores de cabeça.</li>
+                    <li>Dificuldade de concentração e irritabilidade.</li>
+                    <li>Sintomas físicos durante crises de pânico (taquicardia, falta de ar, tontura).</li>
+                </ul>
+            </section>
+
+            <section class="info-section">
+                <h3>Opções de Tratamento</h3>
+                <p>O tratamento é altamente individualizado e pode envolver:</p>
+                <ol>
+                    <li>**Terapia Cognitivo-Comportamental (TCC):** Ajuda a identificar padrões de pensamento distorcidos e a desenvolver mecanismos de enfrentamento.</li>
+                    <li>**Medicamentos (Ansiolíticos e Antidepressivos):** Usados para gerenciar os sintomas mais intensos.</li>
+                    <li>**Técnicas de Relaxamento:** Meditação, mindfulness e exercícios de respiração.</li>
+                </ol>
+            </section>
+        </main>
+
+        <button class="accessibility-toggle-btn" id="toggleAcessibilidade" aria-label="Abrir Opções de Acessibilidade">♿️</button>
+        <aside class="sidebar-acessibilidade hidden" id="accessibilityPanel">
+            <h3>ACESSIBILIDADE</h3>
+            <button class="close-btn" id="closeAcessibilidade" aria-label="Fechar Opções de Acessibilidade">✖</button>
+            <div class="accessibility-options"><p>TEXTOS</p><div class="radio-option"><input type="radio" id="texto-grande" name="tamanho-texto"><label for="texto-grande">GRANDE</label></div><div class="radio-option"><input type="radio" id="texto-padrao" name="tamanho-texto"><label for="texto-padrao">PADRÃO</label></div><div class="radio-option"><input type="radio" id="texto-pequeno" name="tamanho-texto" checked><label for="texto-pequeno">PEQUENO</label></div></div>
+            <div class="accessibility-options"><p>LARGURA</p><div class="radio-option"><input type="radio" id="largura-padrao" name="largura"><label for="largura-padrao">PADRÃO</label></div><div class="radio-option"><input type="radio" id="largura-largo" name="largura" checked><label for="largura-largo">LARGO</label></div></div>
+            <div class="accessibility-options"><p>COR</p><div class="radio-option"><input type="radio" id="cor-claro" name="cor"><label for="cor-claro">CLARO</label></div><div class="radio-option"><input type="radio" id="cor-escuro" name="cor" checked><label for="cor-escuro">ESCURO</label></div></div>
+        </aside>
+    </div>
+
+</body>
+</html>
