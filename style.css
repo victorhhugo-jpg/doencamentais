@@ -4,8 +4,8 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f4f4f4; /* Padrão Claro */
-    color: #333; /* Padrão Escuro */
+    background-color: #d5bc80; /* Padrão Claro */
+    color: #806f47; /* Padrão Escuro */
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -53,7 +53,7 @@ body.scheme-dark .card {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 body.scheme-dark .card h3 {
-    color: #64b5f6; /* Azul claro para títulos em modo escuro */
+    color: #a46338; /* Azul claro para títulos em modo escuro */
 }
 
 /* CORREÇÃO DE ACESSIBILIDADE (Texto do Card no Modo Escuro) */
