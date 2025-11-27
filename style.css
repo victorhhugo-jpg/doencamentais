@@ -38,15 +38,15 @@ body.layout-default .main-container {
 
 /* Esquema de Cores */
 body.scheme-dark {
-    background-color: #1a1a1a;
-    color: #e0e0e0;
+    background-color: #806f47;
+    color: #d5bc80;
 }
 body.scheme-dark .header {
     background-color: #2a2a2a;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 body.scheme-dark .nav-bar a {
-    color: #e0e0e0;
+    color: #d5bc80;
 }
 body.scheme-dark .card {
     background-color: #333;
